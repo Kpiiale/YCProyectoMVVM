@@ -13,8 +13,8 @@ namespace YCProyectoMVVM.ViewModels
     internal class AboutViewModel
     {
  
-        public string MoreInfoUrl => "https://drive.google.com/drive/folders/13s_ORHFmryvn15nskmOBeiN3q6ecIauj?usp=sharing";
-        public string Message => "No tiene ni idea de cuanto sufrí (igual no funciona) ;-;";
+        public string YCMoreInfoUrl => "https://drive.google.com/drive/folders/13s_ORHFmryvn15nskmOBeiN3q6ecIauj?usp=sharing";
+        public string YCMessage => "No tiene ni idea de cuanto sufrí (igual no funciona) ;-;";
         public ICommand ShowMoreInfoCommand { get; }
 
         public AboutViewModel()
@@ -23,6 +23,6 @@ namespace YCProyectoMVVM.ViewModels
         }
 
         async Task ShowMoreInfo() =>
-            await Launcher.Default.OpenAsync(MoreInfoUrl);
+            await Launcher.Default.OpenAsync(YCMoreInfoUrl);
     }
 }

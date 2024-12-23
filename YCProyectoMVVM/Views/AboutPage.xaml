@@ -11,10 +11,9 @@
         <HorizontalStackLayout Spacing="10">
             <Image Source="cat.png"
                    HeightRequest="200" />
-            
         </HorizontalStackLayout>
 
-        <Label Text="{Binding Message}" FontFamily="CampanaFont" FontSize="40" />
+        <Label Text="{Binding YCMessage}" FontFamily="CampanaFont" FontSize="40" />
         <Button Text="Video"  Command="{Binding ShowMoreInfoCommand}" BackgroundColor="Aqua" /> 
     </VerticalStackLayout>
 
