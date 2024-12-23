@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using CommunityToolkit.Mvvm.Input;
+using YCProyectoMVVM.Models;
 
 namespace YCProyectoMVVM.ViewModels
 {
@@ -40,7 +41,6 @@ namespace YCProyectoMVVM.ViewModels
                 string noteId = query["deleted"].ToString();
                 NoteViewModel matchedNote = AllNotes.Where((n) => n.Identifier == noteId).FirstOrDefault();
 
-                // If note exists, delete it
                 if (matchedNote != null)
                     AllNotes.Remove(matchedNote);
             }
@@ -49,13 +49,14 @@ namespace YCProyectoMVVM.ViewModels
                 string noteId = query["saved"].ToString();
                 NoteViewModel matchedNote = AllNotes.Where((n) => n.Identifier == noteId).FirstOrDefault();
 
-                // If note is found, update it
                 if (matchedNote != null)
+                {
                     matchedNote.Reload();
-
-                // If note isn't found, it's new; add it.
+                    AllNotes.Move(AllNotes.IndexOf(matchedNote), 0);
+                }
                 else
-                    AllNotes.Add(new NoteViewModel(Note.Load(noteId)));
+                    AllNotes.Insert(0, new NoteViewModel(Models.Note.Load(noteId)));
             }
         }
     }
+}

@@ -3,10 +3,8 @@
     x:Class="YCProyectoMVVM.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:YCProyectoMVVM"
-    Shell.FlyoutBehavior="Flyout"
+    xmlns:local="clr-namespace:YCProyectoMVVM.Views"
     Title="YCProyectoMVVM">
-
     <TabBar>
         <ShellContent
             Title="NotesYC"
