@@ -7,17 +7,15 @@
     <ContentPage.BindingContext>
         <viewModels:AboutViewModel />
     </ContentPage.BindingContext>
-    <VerticalStackLayout Spacing="10" Margin="10">
+    <VerticalStackLayout Spacing="10" Margin="10" BackgroundColor="Black">
         <HorizontalStackLayout Spacing="10">
-            <Image Source="dotnet_bot.png"
-                   SemanticProperties.Description="The dot net bot waving hello!"
-                   HeightRequest="64" />
-            <Label FontSize="22" FontAttributes="Bold" Text="{Binding Title}" VerticalOptions="End" />
-            <Label FontSize="22" Text="{Binding Version}" VerticalOptions="End" />
+            <Image Source="cat.png"
+                   HeightRequest="200" />
+            
         </HorizontalStackLayout>
 
-        <Label Text="{Binding Message}" />
-        <Button Text="Learn more..." Command="{Binding ShowMoreInfoCommand}" />
+        <Label Text="{Binding Message}" FontFamily="CampanaFont" FontSize="40" />
+        <Button Text="Video"  Command="{Binding ShowMoreInfoCommand}" BackgroundColor="Aqua" /> 
     </VerticalStackLayout>
 
 </ContentPage>

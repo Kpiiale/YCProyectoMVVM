@@ -7,19 +7,21 @@
     <ContentPage.BindingContext>
         <viewModels:NoteViewModel />
     </ContentPage.BindingContext>
-    <VerticalStackLayout Spacing="10" Margin="5">
+    <VerticalStackLayout Spacing="10" Margin="5" BackgroundColor="Black">
         <Editor x:Name="TextEditor"
-                Placeholder="Enter your note"
+                Placeholder="Ingresar nota"
                 Text="{Binding Text}"
                 HeightRequest="100" />
 
         <Grid ColumnDefinitions="*,*" ColumnSpacing="4">
-            <Button Text="Save"
-                    Command="{Binding SaveCommand}"/>
+            <Button Text="Guardar"
+                    Command="{Binding SaveCommand}"
+                    BackgroundColor="Green"/>
 
             <Button Grid.Column="1"
-                    Text="Delete"
-                    Command="{Binding DeleteCommand}"/>
+                    Text="Borrar"
+                    Command="{Binding DeleteCommand}"
+                    BackgroundColor="Red"/>
 
         </Grid>
     </VerticalStackLayout>

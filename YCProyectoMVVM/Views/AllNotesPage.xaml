@@ -23,8 +23,8 @@
         <CollectionView.ItemTemplate>
             <DataTemplate>
                 <StackLayout>
-                    <Label Text="{Binding Text}" FontSize="22"/>
-                    <Label Text="{Binding Date}" FontSize="14" TextColor="Silver"/>
+                    <Label Text="{Binding Text}" FontSize="22" FontFamily="CampanaFont"/>
+                    <Label Text="{Binding Date}" FontSize="14" TextColor="Silver" FontFamily="CampanaFont"/>
                 </StackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
